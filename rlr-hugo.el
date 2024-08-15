@@ -55,9 +55,6 @@
 (defun hugo-yaml-escape (s) "Escape a string for YAML."
        (if (or (string-match ":" s) (string-match "\"" s)) (concat "\"" (replace-regexp-in-string "\"" "\\\\\"" s) "\"") s))
 
-
-" (To avoid unmatched expression warning in Org created by the escaped quotes in hugo-yaml-escape.)
-
 ;; Create new blog post.
 
 
@@ -232,7 +229,7 @@ Note that it only extracts tags from lines like the below:
 			tag))))
 
 ;; Insert internal links using C-c C-l.
-;; From [[https://lucidmanager.org/productivity/create-websites-with-org-mode-and-hugo/][Create Websites with Emacs: Blogging with Org mode and Hugo]]
+;; From https://lucidmanager.org/productivity/create-websites-with-org-mode-and-hugo/
 
 
   ;; Follow Hugo links
