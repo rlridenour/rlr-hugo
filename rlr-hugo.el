@@ -239,7 +239,6 @@ Note that it only extracts tags from lines like the below:
      (string-trim "{{< ref test.org >}}" "{{< ref " ">}}")))
 
   ;; New link type for Org-Hugo internal links
-  (with-after-elpaca-init
    (org-link-set-parameters
     "hugo"
     :complete (lambda ()
@@ -247,7 +246,7 @@ Note that it only extracts tags from lines like the below:
 			(file-name-nondirectory
 			 (read-file-name "File: "))
 			" >}}"))
-    :follow #'org-hugo-follow))
+    :follow #'org-hugo-follow)
 
 
 (provide 'rlr-hugo)
